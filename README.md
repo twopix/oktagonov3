@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1f5d4df7-3c7c-433d-a671-ea7471a1547c/deploy-status)](https://app.netlify.com/sites/dazzling-chandrasekhar-d13ad9/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5299b5e1-2e36-46b1-bcaa-b8ce961a54da/deploy-status)](https://app.netlify.com/sites/oktagonov3/deploys)
 
 # Oktagono Properties - Real Esate Greece
 [www.oktagonoproperties.com](https://www.oktagonoproperties.com)

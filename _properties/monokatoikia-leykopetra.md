@@ -91,60 +91,20 @@ table:
     - key: Κλειστό γκαράζ
       value: 1
   en:
-    - key: key
-      value: value
+    - key: Kitchen
+      value: 3
 features:
   el:
     - check: true
-      label: Air conditioning
+      label: Σύστημα θέρμανσης
     - check: true
-      label: Balcony
-    - check: false
-      label: Bedding
+      label: Υπόγεια αποθήκη
     - check: true
-      label: Cable TV
-    - check: false
-      label: Cleaning after exit
+      label: Σύστημα θέρμανσης
     - check: true
-      label: Cofee pot
-    - check: true
-      label: Computer
-    - check: false
-      label: Cot
-    - check: true
-      label: Internet
-    - check: false
-      label: Iron
-    - check: true
-      label: Juicer
-    - check: false
-      label: Lift
-    - check: false
-      label: Microwave
-    - check: true
-      label: Oven
-    - check: false
-      label: Parking
-    - check: false
-      label: Parquet
-    - check: false
-      label: Radio
-    - check: true
-      label: Roof terrace
-    - check: false
-      label: Smoking allowed
-    - check: true
-      label: Terrace
-    - check: false
-      label: Toaster
-    - check: true
-      label: Towelwes
-    - check: true
-      label: Use of pool
-    - check: true
-      label: kouzina
+      label: Κλειστό γκαράζ
   en:
     - check: true
-      label: pool garden
+      label: Closed garage
 ---
 

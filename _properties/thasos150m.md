@@ -52,4 +52,3 @@ gallery:
   - /assets/img/properties/thasos150m26.jpg
   - /assets/img/properties/thasos150m27.jpg
 ---
-\-

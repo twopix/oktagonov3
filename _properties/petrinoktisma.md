@@ -24,4 +24,3 @@ gallery:
   - /assets/img/petrinoktisma4.jpg
   - /assets/img/petrinoktisma5.jpg
 ---
-\-
