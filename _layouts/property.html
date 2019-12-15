@@ -1,0 +1,155 @@
+---
+layout: default
+---
+<section class="page">
+    <div class="container">
+        <div class="page-wrap">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h4 class="page-header">{{page.title[site.lang] }}</h4>
+                    <!-- SLIDER EXAMPLE -->
+                    <section class="slide">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card pad-all"> 
+                                <div id="slider" class="flexslider">
+                                    <ul class="slides">
+                                    {% for image in page.gallery %}
+                                    <li data-index="rs-{{forloop.index}}">
+                                        <a href="{{ image | prepend: site.baseurl_root }}" class="gallery-img"><img src="{{ image | prepend: site.baseurl_root }}"  alt=""  class="rev-slidebg"></a>
+                                    </li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                                <div id="carousel" class="flexslider">
+                                    <ul class="slides">
+                                    {% for image in page.gallery %}
+                                    <li data-index="rs-{{forloop.index}}">
+                                        <img src="{{ image | prepend: site.baseurl_root }}"  alt=""  class="rev-slidebg">
+                                    </li>
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel pad-all">
+                            <div class="listingInfo">
+                                <h3>
+                                    <a href="#" class="name">{{page.title[site.lang]}}</a> 
+                                    {% if page.price %}
+                                        <span class="pull-right">{{page.price | append: "&euro;" }}</span>
+                                    {% endif %}
+                                </h3>
+                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{page.address[site.lang]}}</p>
+                                <p class="lead">{{page.name[site.lang]}} </p>
+                            </div>
+                        </div>
+                        <div class="panel pad-all">
+                            <h3 class="hr hr-after">{% t global.lbl_property_desc %} </h3>
+                            <p class="lead">{{page.description[site.lang] | markdownify}} </p>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    {{content}}
+                                </div>
+                            </div>
+                            {% if page.features[site.lang]  %}
+                            <h3>{% t global.lbl_property_feat %}</h3>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4">
+                                        {% assign plus_3 = page.features[site.lang].size | plus: 3  %}
+                                        {% assign divider = page.features[site.lang].size | modulo: 3  %}
+                                        {% assign round_val = plus_3 | minus: divider  %}
+                                        {% assign chunk = round_val | divided_by: 3  %}
+                                    <ul class="features-list">
+                                        {% for feature in page.features[site.lang] %}
+                                            {% assign value = forloop.index | modulo: chunk %}
+                                            {% if value == 0 %}
+                                                </div>
+                                                <div class="col-md-4 col-sm-4">
+                                                    <ul class="features-list">
+                                            {% endif %}
+                                            <li><i class="fa fa-{% if feature.check %}check{% else%}times{%endif%}"></i> {{feature.label}}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div> 
+                            </div>
+                        </div>
+                        {% endif %}
+                        <!--/panel -->
+                    </section>
+                </div>
+                <div class="col-sm-5">
+                    <h4 class="page-header">{% t global.lbl_contact %}</h4>
+                    <div class="widget card pad-all">
+                        <div class="advert row">
+                            <div class="logo-wrap col-sm-4">
+                                {{site.logo}}
+                                <div class="rating" data-stars="5.0"><span>(26)</span></div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h3>{{site.title}}</h3>
+                                <p>{% t global.address %}.</p>
+                                <p class="btn-group clearfix" role="group" aria-label="...">
+                                    <button class="btn btn-default btn-raised js-open-modal-left" data-em-selector="#ajaxModal" data-em-position="left" data-em-push-content="true" data-em-css="custom-class" data-em-keyboard="false" data-em-backdrop="static">Contact Agency</button>
+                                    <button class="btn btn-danger btn-raised js-open-modal-right" data-em-selector="#shedule" data-em-position="right" data-em-push-content="true" data-em-css="custom-class" data-em-keyboard="false" data-em-backdrop="static">More propeties</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /end:widget -->
+                    {% if page.table[site.lang]  %}
+                    <div class="widget card pad-all">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <tbody>
+                                {% for row in page.table[site.lang] %}
+                                    <tr>
+                                        <th scope="row"> {{row.key}} </th>
+                                        <td>{{row.value}} </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    {% endif%}
+                    <!-- /widget -->
+                    <div class="widget card pad-all">
+                        <div id="map">
+                        <iframe  width="100%"  height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAvq9HIQexYIGtKKa1NhIeF_jRWRm47YCc&q={{page.address[site.lang] | replace: " ", "+"}}" allowfullscreen></iframe></div>
+                    </div>
+                    <!-- /widget -->
+                    <div class="card"> 
+                    {% for property in site.properties limit:4 %}
+                        <ul class="childs">
+                            <li class="child-property">
+                                <div class="card-content">
+                                    <div class="listingInfo">
+                                        <div class="propertyStats">
+                                        </div>
+                                        <div class="pull-right">
+                                            <p class="priceText">{{property.price | append: "&euro;" }} </p>
+                                        </div>
+                                        <div class="vcard">
+                                            <h2><a href="{{property.url | prepend: site.baseurl }}" class="name">{{property.title[site.lang]}}</a></h2>
+                                            <p class="listingLocation">{{property.address[site.lang]}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-action text-right">
+                                    <a href="{{property.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="top" title="{{property.title[site.lang]}}" data-original-title="{{property.title[site.lang]}}"><i class="fa fa-angle-double-right"></i> {% t global.lbl_more %} </a>
+                                </div>
+                                <!-- end. Card actions -->
+                            </li>
+                            <!-- end:child property -->
+                        </ul>
+                    {% endfor %}
+                    </div>
+                </div>
+                <!-- end: Col -->
+            </div>
+        </div>
+        <!-- /page content -->  
+    </div>
+</section>

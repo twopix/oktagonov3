@@ -1,0 +1,35 @@
+global:
+  title: Oktagono Properties
+  description: "Thessaloniki-based Oktagono is dealing with real estate services, finding, selling and renting real estate, business spaces and land."
+  address: 10 Leontos Sofou Str., 54625, Thessaloniki
+  contact_us: Please Contact Us
+  assignment: Assignment of property
+  assignment_desc: Want to Sell your Property or Rent a House with easy step?
+  lbl_contact: Contact
+  lbl_contact_phone: Cotnact phone
+  lbl_address: Address
+  lbl_phone: Telephones
+  lbl_recentproperties: Recently added
+  lbl_recentproperties_description: These are the most recent properties added
+  lbl_property_desc: Property Description
+  lbl_property_feat: Property Features
+  lbl_price: Price
+  lbl_more: more...
+
+  og:
+    title: Oktagono Properties
+    image: "/assets/img/logo-oktagonoproperties.png"
+    description: "Thessaloniki-based Oktagono is dealing with real estate services, finding, selling and renting real estate, business spaces and land."
+    locale: en_EN
+
+
+email: info@oktagonoproperties.com
+address: 10 Leontos Sofou Str., 54625, Thessaloniki
+phone: +30 2311 268824
+mobile: +30 6973525751 
+logo: "<img src='/assets/img/logo-oktagonoproperties.png' alt='logo' class='img-responsive'>"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+info:
+  - contact: Contact
+  - related: Recent properties

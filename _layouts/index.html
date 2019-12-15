@@ -1,0 +1,151 @@
+---
+layout: default
+---
+<div class="carousel-wrap">
+	<div id="rev_slider_108_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="food-carousel80" style="margin:0px auto;padding:0px;margin-top:0px;margin-bottom:0px;background-color:#222">
+		<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+		<div id="rev_slider_108_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+			<ul>
+				{%for slide in page.carousel_images%}
+				 <li data-index="rs-{{forloop.index}}" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="{{ slide | prepend: site.baseurl_root }}" data-rotate="0" data-saveperformance="off" data-param1="" data-param2="" data-description="">
+					<img src="{{ slide | prepend: site.baseurl_root }}" alt="" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+				 </li>
+				{% endfor %}
+			</ul>
+			<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+		</div>
+	</div>
+</div>
+<section class="main-search">
+	<div class="container">
+		<h1>{{site.title}}</h1>
+		<p>{% t global.description %}</p>
+	</div>
+</section>
+<section class="inner-page">
+	<div class="container">
+		<div class="row">
+			<div class="content-row">
+				<div class="row">
+					<div class="col-sm-7">
+						<h3 class="heading">{% t global.lbl_recentproperties %}</h3>
+						<p class="small">{% t global.lbl_recentproperties_description %}</p>
+					</div>
+					<div class="col-sm-5">
+						<ul class="list-unstyled list-inline pull-right">
+							<li><a href="#" class="btn btn-default btn-raised ripple-effect">Sale</a>
+							</li>
+							<li><a href="#" class="btn btn-default btn-raised ripple-effect">Rents</a>
+							</li>
+							<li><a href="#" class="btn btn-default btn-raised ripple-effect">List</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+				{% for property in site.properties %}
+					<div class="col-sm-4">
+						<div class="card">
+							<div class="card-image">
+								<img class="img-responsive" src="{{property.image}}" alt="">
+								<span class="card-title">{{property.title[site.lang] }}</span>
+								<span class="card-price">For Sale</span>
+							</div>
+							<div class="card-content">
+								<div class="listingInfo">
+									<figure class="listerName">
+										<a href="#" class="agent-wrapper">
+											<img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }}" width="50" height="50" alt="">
+										</a>
+									</figure>
+									<div class="propertyStats">
+										<p class="priceText">{{property.price | append: "&euro;" }}</p>
+									</div>
+									<div class="vcard">
+										<h2><a href="{{property.url | prepend: site.baseurl }}" class="name">{{property.description[site.lang] | truncate: 50 }}</a></h2>
+										<p class="listingLocation save"><i class="fa fa-map-o"></i>{{property.address[site.lang]}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="card-action">
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="254 square feet"><i class="fa fa-th"></i><span>167</span></a>
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="5 Bedroom House"><i class="fa fa-bed"></i><span>3</span></a>
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="2 Parking space"><i class="fa fa-car"></i><span>1</span></a>
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Energy-Efficient Home Grade B-"><i class="fa fa-battery-three-quarters"></i><span> B-</span></a>
+								<div class="pull-right">
+									<a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+								</div>
+							</div>
+							<!-- end. Card actions -->
+						</div>
+					</div>
+					<!-- /col -->
+					{% assign loopindex = forloop.index | modulo: 3 %}
+					{% if loopindex == 0 %}
+						</div><div class="row">
+					{% endif %}
+				{% endfor %}
+				</div>
+				<!-- /inner row --> 
+			</div> 
+		</div>
+	</div>
+	<div class="container">
+		<div class="card card-wraped text-center callElem">
+			<div class="row">
+				<div class="col-md-3 col-sm-4">
+					<div class="l-element l-top">
+						<div class="box-icon">
+							<div class="icon-wrap circle"> <i class="fa fa-map-o"></i>
+							</div>
+							<div class="text">
+								<h4>20 countries</h4>
+								<p>We cover more than 20 countries</p>
+							</div>
+						</div>
+						<!--/.icon box -->
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4">
+					<div class="l-element l-top">
+						<div class="box-icon">
+							<div class="icon-wrap circle"> <i class="fa fa-building"></i>
+							</div>
+							<div class="text">
+								<h4> 250 CITIES </h4>
+								<p>We spread in over 250 cities</p>
+							</div>
+						</div>
+						<!--/.icon box -->
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4">
+					<div class="l-element l-top">
+						<div class="box-icon">
+							<div class="icon-wrap circle"> <i class="ti-user"></i>
+							</div>
+							<div class="text">
+								<h4>1500 Members</h4>
+								<p>A growing community</p>
+							</div>
+						</div>
+						<!--/.icon box -->
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4">
+					<div class="l-element l-top noborder">
+						<div class="box-icon">
+							<div class="icon-wrap circle"> <i class="fa fa-map-marker"></i>
+							</div>
+							<div class="text">
+								<h4> 78000 properties </h4>
+								<p>Over 70000 properties listed</p>
+							</div>
+						</div>
+						<!--/.icon box -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,25 @@
+---
+laytout: null
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+  <url>
+    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+    {% if page.date %}<lastmod>{{ page.date | date_to_xmlschema }}</lastmod>{% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  {% endfor %}
+  {% for property in site.properties %}
+    {% unless property.published == false %}
+    <url>
+      <loc>{{ site.url }}{{ property.url }}</loc>
+      {% if property.sitemap.lastmod %}<lastmod>{{ property.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>{% elsif property.date %}<lastmod>{{ property.date | date_to_xmlschema }}</lastmod>{% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+      {% if property.sitemap.changefreq %}<changefreq>{{ property.sitemap.changefreq }}</changefreq>{% else %}<changefreq>monthly</changefreq>{% endif %}
+      {% if property.sitemap.priority %}<priority>{{ property.sitemap.priority }}</priority>{% else %}<priority>0.5</priority>{% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+</urlset>

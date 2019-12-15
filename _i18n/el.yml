@@ -1,0 +1,33 @@
+global:
+  title: Oktagono Properties
+  description: "Η εταιρεία Oktagono με έδρα τη Θεσσαλονίκη δραστηριοποιείται στις μεσιτικές υπηρεσίες, εύρεσης, πώλησης και ενοικίασης ακινήτων, επαγγελματικών χώρων και γης."
+  contact_us: Επικοινωνήστε μαζί μας
+  address: Λέοντος Σοφου 10, 54625,  Θεσσαλονίκη  
+  assignment: Ανάθεση Ακινήτου
+  assignment_desc: Στείλτε μας το ακίνητο που επιθυμείτε να πουλήσετε / ενοικιάσετε
+  lbl_contact: Επικοινωνία
+  lbl_address: Διεύθυνση
+  lbl_contact_phone: Τηλέφωνο Επικοινωνίας
+  lbl_phone: Τηλέφωνο
+  lbl_recentproperties: Τελευταίες καταχωρήσεις
+  lbl_recentproperties_description: Αυτά είναι τα πιο πρόσφατα ακίνητα που προστέθηκαν
+  lbl_property_desc: Περιγραφή
+  lbl_property_feat: Χαρακτηριστικά 
+  lbl_price: Τιμή
+  lbl_more: περισσότερα...
+
+  og:
+    title: Oktagono Properties
+    description: "Η εταιρεία Oktagono με έδρα τη Θεσσαλονίκη δραστηριοποιείται στις μεσιτικές υπηρεσίες, εύρεσης, πώλησης και ενοικίασης ακινήτων, επαγγελματικών χώρων και γης."
+    image: "/assets/img/logo-oktagonoproperties.png"
+    locale: en_EN
+  
+
+address: Λέοντος Σοφου 10, 54625,  Θεσσαλονίκη
+phone: +30 2311 268824
+mobile: +30 6973525751 
+logo: "<img src='/assets/img/logo-oktagonoproperties.png' alt='logo' class='img-responsive'>"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+info:
+  - related: Σχετικά ακήνιτα

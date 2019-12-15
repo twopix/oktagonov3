@@ -1,0 +1,311 @@
+---
+layout: default
+title: 
+    en: Properties
+    el: Ακίνητα
+description:
+  en: Thessaloniki-based Oktagono is dealing with real estate services, finding, selling and renting real estate, business spaces and land.
+  el: Η εταιρεία Oktagono με έδρα τη Θεσσαλονίκη δραστηριοποιείται στις μεσιτικές υπηρεσίες, εύρεσης, πώλησης και ενοικίασης ακινήτων, επαγγελματικών χώρων και γης.
+---
+<div class="container space-sm">
+    <div class="page-content col-thin-left">
+        <div class="category-list">
+            <div class="tab-box shadow card">
+                <ul class="nav nav-tabs add-tabs" id="ajaxTabs" role="tablist">
+                    <li class="active"><a href="#list" data-url="#" role="tab" data-toggle="tab">List view <span class="ti-view-list"></span></a>
+                    </li>
+                    <li class=""><a href="#grid3" data-url="#" role="tab" data-toggle="tab">Grid x3 <span class="ti-layout-grid3"></span></a>
+                    </li>
+                    <li class=""><a href="#grid" data-url="#" role="tab" data-toggle="tab">Grid x2 <span class="ti-layout-grid2"></span></a>
+                    </li>
+                </ul>
+                <div class="tab-filter">
+                    <div class="selecter select-short-by closed" tabindex="0">
+                    </div>
+                </div>
+            </div>
+            <div class="adds-wrapper">
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="list">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {% for card in site.properties%}
+                                <div class="card card-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="card-image bg-image" data-image-src="{{ card.image | prepend: site.baseurl_root }} " style="background: url({{ card.image | prepend: site.baseurl_root }} ) 50% 50% / cover no-repeat;">
+                                                <span class="card-title">{{card.title[site.lang]}}</span>
+                                                <span class="card-price">For Sale</span>
+                                            </div>
+                                        </div>
+                                        <!-- /col 4 -->
+                                        <div class="col-sm-8">
+                                            <div class="card-content">
+                                                <div class="listingInfo">
+                                                    <div class="propertyStats">
+                                                        <p class="priceText">{{card.price | append: "&euro;" }} </p>
+                                                    </div>
+                                                    <div class="vcard">
+                                                        <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                        <p class="listingLocation"><i class="fa fa-map-o"></i> {{card.address[site.lang]}}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-action">
+                                                    <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="254 square feet"><i class="fa fa-th"></i><span>167</span></a>
+                                                    <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="5 Bedroom House"><i class="fa fa-bed"></i><span>3</span></a>
+                                                    <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="2 Parking space"><i class="fa fa-car"></i><span>1</span></a>
+                                                    <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Energy-Efficient Home Grade B-"><i class="fa fa-battery-three-quarters"></i><span> B-</span></a>
+                                                    <div class="pull-right">
+                                                        <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- end. Card actions -->
+                                            </div>
+                                        </div>
+                                        <!-- /col 8 -->
+                                    </div>
+                                    <!-- /inner row -->
+                                </div> 
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- /inner row -->
+                    </div>
+                    <!-- /tab pane -->
+                    <div class="tab-pane fade" id="grid3">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                {% for card in site.properties%}
+                                {% capture thecycle %}{% cycle 'one', 'second', 'third' %}{% endcapture %}
+                                {% if thecycle == 'one' %}
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <span class="card-title">{{card.title[site.lang]}}</span>
+                                        <span class="card-price">For Sale</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="listingInfo">
+                                            <figure class="listerName">
+                                                <a href="#" class="agent-wrapper">
+                                                    <img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }} " width="50" height="50" alt="Danny">
+                                                </a>
+                                            </figure>
+                                            <div class="propertyStats">
+                                                <p class="priceText">{{card.price | append: "&euro;" }}</p>
+                                            </div>
+                                            <div class="vcard">
+                                                <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{card.address[site.lang]}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="254 square feet"><i class="fa fa-th"></i><span>254</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="5 Bedroom House"><i class="fa fa-bed"></i><span>5</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="2 Parking space"><i class="fa fa-car"></i><span>2</span></a>
+                                        <div class="pull-right">
+                                            <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                        </div>
+                                    </div>
+                                    <!-- end. Card actions -->
+                                </div> 
+                                {% endif %}
+                                {% endfor %}
+
+                            </div>
+                            <!-- /col -->
+                            <div class="col-sm-4">
+                                {% for card in site.properties%}
+                                {% capture thecycle %}{% cycle 'first', 'two', 'third' %}{% endcapture %}
+                                {% if thecycle == 'two' %}
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <span class="card-title">{{card.title[site.lang]}}</span>
+                                        <span class="card-price">For Sale</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="listingInfo">
+                                            <figure class="listerName">
+                                                <a href="#" class="agent-wrapper">
+                                                    <img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }}" width="50" height="50" alt="Danny">
+                                                </a>
+                                            </figure>
+                                            <div class="propertyStats">
+                                                <p class="priceText">{{card.price | append: "&euro;" }}</p>
+                                            </div>
+                                            <div class="vcard">
+                                                <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{card.address[site.lang]}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="254 square feet"><i class="fa fa-th"></i><span>254</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="5 Bedroom House"><i class="fa fa-bed"></i><span>5</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="2 Parking space"><i class="fa fa-car"></i><span>2</span></a>
+                                        <div class="pull-right">
+                                            <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                        </div>
+                                    </div>
+                                    <!-- end. Card actions -->
+                                </div> 
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- /col -->
+                            <div class="col-sm-4">
+                                {% for card in site.properties%}
+                                {% capture thecycle %}{% cycle 'first', 'second', 'third' %}{% endcapture %}
+                                {% if thecycle == 'third' %}
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <span class="card-title">{{card.title[site.lang]}}</span>
+                                        <span class="card-price">For Sale</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="listingInfo">
+                                            <figure class="listerName">
+                                                <a href="#" class="agent-wrapper">
+                                                    <img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }}" width="50" height="50" alt="Danny">
+                                                </a>
+                                            </figure>
+                                            <div class="propertyStats">
+                                                <p class="priceText">{{card.price | append: "&euro;" }}</p>
+                                            </div>
+                                            <div class="vcard">
+                                                <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{card.address[site.lang]}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="254 square feet"><i class="fa fa-th"></i><span>254</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="5 Bedroom House"><i class="fa fa-bed"></i><span>5</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="2 Parking space"><i class="fa fa-car"></i><span>2</span></a>
+                                        <div class="pull-right">
+                                            <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                        </div>
+                                    </div>
+                                    <!-- end. Card actions -->
+                                </div> 
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- /inner row -->
+                    </div>
+                    <!-- /tab pane -->
+                    <div class="tab-pane fade" id="grid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            {% for card in site.properties%}
+                                {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                                {% if thecycle == 'even' %}
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <span class="card-title">{{card.title[site.lang]}}</span>
+                                        <span class="card-price">For Sale</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="listingInfo">
+                                            <figure class="listerName">
+                                                <a href="#" class="agent-wrapper">
+                                                    <img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }}" width="50" height="50" alt="Danny">
+                                                </a>
+                                            </figure>
+                                            <div class="propertyStats">
+                                                <p class="priceText">{{card.price | append: "&euro;" }}</p>
+                                            </div>
+                                            <div class="vcard">
+                                                <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{card.address[site.lang]}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="254 square feet"><i class="fa fa-th"></i><span>254</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="5 Bedroom House"><i class="fa fa-bed"></i><span>5</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="2 Parking space"><i class="fa fa-car"></i><span>2</span></a>
+                                        <div class="pull-right">
+                                            <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                        </div>
+                                    </div>
+                                    <!-- end. Card actions -->
+                                </div> 
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- /col -->
+                            <div class="col-sm-6">
+                                {% for card in site.properties%}
+                                 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+                                  {% if thecycle == 'odd' %}
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <span class="card-title">{{card.title[site.lang]}}</span>
+                                        <span class="card-price">For Sale</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="listingInfo">
+                                            <figure class="listerName">
+                                                <a href="#" class="agent-wrapper">
+                                                    <img class="agent-photo" src="{{ "/assets/img/avatar-2.jpg" | prepend: site.baseurl_root }}" width="50" height="50" alt="Danny">
+                                                </a>
+                                            </figure>
+                                            <div class="propertyStats">
+                                                <p class="priceText">{{card.price | append: "&euro;" }}</p>
+                                            </div>
+                                            <div class="vcard">
+                                                <h2><a href="{{card.url | prepend: site.baseurl }}" class="name">{{card.description[site.lang] | truncate: 70}}</a></h2>
+                                                <p class="listingLocation"><i class="fa fa-map-o"></i>{{card.address[site.lang]}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="254 square feet"><i class="fa fa-th"></i><span>254</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="5 Bedroom House"><i class="fa fa-bed"></i><span>5</span></a>
+                                        <a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="2 Parking space"><i class="fa fa-car"></i><span>2</span></a>
+                                        <div class="pull-right">
+                                            <a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+                                        </div>
+                                    </div>
+                                    <!-- end. Card actions -->
+                                </div>
+                                 {% endif %}
+                                {% endfor %}
+                            </div>
+                            <!-- /col -->
+                        </div>
+                        <!-- /inner row -->
+                    </div>
+                    <!-- /tab pane -->
+                </div>
+            </div>
+        </div>
+        <!--
+        <nav>
+            <ul class="pagination pagination-lg">
+                <li><a href="#" aria-label="Previous" class="btn btn-raised ripple-effect btn-default"><span aria-hidden="true">«</span></a>
+                </li>
+                <li><a href="#" class="btn btn-raised ripple-effect btn-default">1</a>
+                </li>
+                <li><a href="#" class="btn btn-raised ripple-effect btn-default">2</a>
+                </li>
+                <li><a href="#" class="btn btn-raised ripple-effect btn-default">3</a>
+                </li>
+                <li><a href="#" class="btn btn-raised ripple-effect btn-default">4</a>
+                </li>
+                <li><a href="#" class="btn btn-raised ripple-effect btn-default">5</a>
+                </li>
+                <li><a href="#" aria-label="Next" class="btn btn-raised ripple-effect btn-default"><span aria-hidden="true">»</span></a>
+                </li>
+            </ul>
+        </nav>
+        -->
+    </div>
+</div>

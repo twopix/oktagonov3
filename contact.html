@@ -1,0 +1,102 @@
+---
+layout: default
+title: 
+    en: Contact Us
+    el: Επικοινωνία
+description:
+  en: Thessaloniki-based Oktagono is dealing with real estate services, finding, selling and renting real estate, business spaces and land.
+  el: Η εταιρεία Oktagono με έδρα τη Θεσσαλονίκη δραστηριοποιείται στις μεσιτικές υπηρεσίες, εύρεσης, πώλησης και ενοικίασης ακινήτων, επαγγελματικών χώρων και γης.
+---
+<div class="inner-page">
+    <div class="container">
+        <div class="row">
+            <!-- FORM -->
+            <div class="col-md-8 col-sm-8">
+                <div class="card pad-all mar-no ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378.45966530982537!2d22.93666858658782!3d40.6369975823618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a839a741873879%3A0xcfcd2b6e0ee8aae!2zzpvOrc6_zr3PhM6_z4IgzqPOv8-Gzr_PjSAxMCwgzpjOtc-Dz4POsc67zr_Ovc6vzrrOtyA1NDYgMjU!5e0!3m2!1sel!2sgr!4v1574634320336!5m2!1sel!2sgr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    {% tf contact.md %}
+                    <form method="post" action="https://formspree.io/xwkpepbq" class="space-md ">
+                        <fieldset>
+                            <input type="hidden" name="action" value="contact_send">
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        <label for="contact:name">Full Name *</label>
+                                        <input required="" type="text" value="" class="form-control" name="name" id="contact:name">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="contact:email">E-mail Address *</label>
+                                        <input required="" type="email" value="" class="form-control" name="_replyto" id="contact:email">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="contact:phone">Phone</label>
+                                        <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <label for="contact:subject">Subject *</label>
+                                        <input required="" type="text" value="" class="form-control" name="subject" id="contact:subject">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Department</label>
+                                        <select class="form-control pointer" name="contact[department]">
+                                            <option value="">--- Select ---</option>
+                                            <option value="Marketing">Sales</option>
+                                            <option value="Webdesign">Support</option>
+                                            <option value="Architecture">Just the note</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="contact:message">Message *</label>
+                                        <textarea required="" maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="col-md-12 m-top-25">
+                                <button type="submit" class="btn btn-danger btn-raised btn-lg ripple-effect" value="Send"><i class="fa fa-check"></i> SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /FORM -->
+            </div>
+            <!-- INFO -->
+            <div class="col-md-4 col-sm-4">
+                <div class="pad-all card">
+                    <div class="widget">
+                        <hr class="mBtm-50 mTop-30" data-symbol="Featured video">
+                        <div class="responsive-video">
+                            <a href="/">{{site.logo}}</a>
+                        </div>
+                    </div>
+                    <!-- /widget -->
+                    <div class="widget text-center">
+                        <hr class="mBtm-50 mTop-30" data-symbol="ADDRESS">
+                        <h3>{% t global.lbl_address %}</h3>
+                        <address>{% t global.address %}</address>
+                    </div>
+                    <div class="widget text-center">
+                        <hr class="mBtm-50 mTop-30" data-symbol="PHONES">
+                        <h3>{% t global.lbl_phone %} </h3>
+                        <a href="tel:{{site.phone}}" ><i class="fa fa-phone"></i> {{site.phone}}</a> | <a href="tel:{{site.mobile}}" ><i class="fa fa-mobile"></i> {{site.mobile}}</a>
+                        </address>
+                    </div>
+                    <div class="widget text-center">
+                        <hr class="mBtm-50 mTop-30" data-symbol="EMAIL">
+                        <h3>E-Mail</h3>
+                        <address><a href="mailto:{{site.email}}" ><i class="fa fa-envelope"></i> {{site.email}}</a> </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

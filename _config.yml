@@ -1,0 +1,56 @@
+title: Oktagono Properties
+email: info@oktagonoproperties.com
+phone: +30 2311 268824
+mobile: +30 6973525751 
+logo: "<img src='/assets/img/logo-oktagonoproperties.png' alt='logo' class='img-responsive'>"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://oktagonoproperties.com"
+info:
+  - contact: Επικοινωνία
+  - related: Σχετικά ακήνιτα
+
+# Google Analytics 
+google_analytics: UA-19091512-84
+
+# set to 'true' to enable Netlify CMS (/admin) in production builds
+netlifycms: true
+
+
+nav:
+  
+- title: 
+    el: Αρχική 
+    en: Home 
+  url: /
+  class: ti-home
+- title: 
+    el: Εταιρία
+    en: About 
+  url: /about.html
+  class: ti-id-badge
+- title: 
+    el: Ακίνητα
+    en: Properties
+  url: /properties.html
+  class:  ti-list-ol
+- title: 
+    el: Επικοινωνία
+    en: Contact
+  url: /contact.html
+  class: ti-email
+
+# Build settings
+plugins:
+  - jekyll-multiple-languages-plugin
+  - jekyll-sitemap
+
+collections:
+  properties:
+    output: true
+
+languages: ["el", "en"]
+exclude_from_localizations: ["assets", "javascript",  "images", "css"]
+language_default: 'el'
+languageNames:
+  el: Ελληνικά
+  en: English
