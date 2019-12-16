@@ -16,7 +16,7 @@ layout: default
                                     <ul class="slides">
                                     {% for image in page.gallery %}
                                     <li data-index="rs-{{forloop.index}}">
-                                        <a href="{{ image | prepend: site.baseurl_root }}" class="gallery-img"><img src="{{ image | prepend: site.baseurl_root }}"  alt=""  class="rev-slidebg"></a>
+                                        <a href="{{ image | prepend: site.baseurl_root }}" class="gallery-img"><img src="{{ image | prepend: site.baseurl_root }}?nf_resize=smartcrop&w=721&h=406"  alt=""  class="rev-slidebg"></a>
                                     </li>
                                     {% endfor %}
                                     </ul>
