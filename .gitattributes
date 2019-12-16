@@ -1,3 +1,4 @@
 dog.jpg filter=lfs diff=lfs merge=lfs -text
 cat.gif filter=lfs diff=lfs merge=lfs -text
 map-image.png filter=lfs diff=lfs merge=lfs -text
+assets/img/map-image.png filter=lfs diff=lfs merge=lfs -text
