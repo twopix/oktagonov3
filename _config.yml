@@ -22,22 +22,22 @@ nav:
     el: Αρχική 
     en: Home 
   url: /
-  class: ti-home
+  class: fa fa-home
 - title: 
     el: Εταιρία
     en: About 
   url: /about.html
-  class: ti-id-badge
+  class: fa fa-credit-card
 - title: 
     el: Ακίνητα
     en: Properties
   url: /properties.html
-  class:  ti-list-ol
+  class:  fa fa-list-ol
 - title: 
     el: Επικοινωνία
     en: Contact
   url: /contact.html
-  class: ti-email
+  class: fa fa-envelope
 
 # Build settings
 plugins:
