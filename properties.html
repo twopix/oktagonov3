@@ -33,7 +33,7 @@ description:
                                 <div class="card card-horizontal">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <div class="card-image bg-image" data-image-src="{{ card.image | prepend: site.baseurl_root }} " style="background: url({{ card.image | prepend: site.baseurl_root }} ) 50% 50% / cover no-repeat;">
+                                            <div class="card-image bg-image" data-image-src="{{ card.image | prepend: site.baseurl_root }} " style="background: url({{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=300 ) 50% 50% / cover no-repeat;">
                                                 <span class="card-title">{{card.title[site.lang]}}</span>
                                                 <span class="card-price">For Sale</span>
                                             </div>
@@ -80,7 +80,7 @@ description:
                                 {% if thecycle == 'one' %}
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=430" alt="">
                                         <span class="card-title">{{card.title[site.lang]}}</span>
                                         <span class="card-price">For Sale</span>
                                     </div>
@@ -121,7 +121,7 @@ description:
                                 {% if thecycle == 'two' %}
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=430" alt="">
                                         <span class="card-title">{{card.title[site.lang]}}</span>
                                         <span class="card-price">For Sale</span>
                                     </div>
@@ -161,7 +161,7 @@ description:
                                 {% if thecycle == 'third' %}
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=430 " alt="">
                                         <span class="card-title">{{card.title[site.lang]}}</span>
                                         <span class="card-price">For Sale</span>
                                     </div>
@@ -206,7 +206,7 @@ description:
                                 {% if thecycle == 'even' %}
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=660" alt="">
                                         <span class="card-title">{{card.title[site.lang]}}</span>
                                         <span class="card-price">For Sale</span>
                                     </div>
@@ -246,7 +246,7 @@ description:
                                   {% if thecycle == 'odd' %}
                                 <div class="card">
                                     <div class="card-image">
-                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }} " alt="">
+                                        <img class="img-responsive" src="{{ card.image | prepend: site.baseurl_root }}?nf_resize=fit&w=660 " alt="">
                                         <span class="card-title">{{card.title[site.lang]}}</span>
                                         <span class="card-price">For Sale</span>
                                     </div>
