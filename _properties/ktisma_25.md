@@ -6,7 +6,7 @@ title:
 image: /assets/img/properties/ktisma25_1.jpg
 squard: 25
 address:
-  el: 'Θάσος, Μπροστά στη θάλασσα'
+  el: 'Θάσος'
   en: 'Thassos, Greece'
 description:
   el: >-

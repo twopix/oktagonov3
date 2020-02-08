@@ -47,7 +47,7 @@ layout: default
 					<div class="col-sm-4">
 						<div class="card">
 							<div class="card-image">
-								<img class="img-responsive" src="{{property.image}}?nf_resize=fit&w=437" alt="{{property.title[site.lang] }}">
+								<a href="{{property.url | prepend: site.baseurl }}"><img class="img-responsive" src="{{property.image}}?nf_resize=fit&w=437" alt="{{property.title[site.lang] }}"></a>
 								<span class="card-title">{{property.title[site.lang] }}</span>
 								<span class="card-price">For Sale</span>
 							</div>
@@ -68,12 +68,12 @@ layout: default
 								</div>
 							</div>
 							<div class="card-action">
-								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="254 square feet"><i class="fa fa-th"></i><span>167</span></a>
-								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="5 Bedroom House"><i class="fa fa-bed"></i><span>3</span></a>
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="{{property.squard}} square m"><i class="fa fa-th"></i><span>{{property.squard}}</span></a>
+								<!--<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="5 Bedroom House"><i class="fa fa-bed"></i><span>3</span></a>
 								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="2 Parking space"><i class="fa fa-car"></i><span>1</span></a>
-								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Energy-Efficient Home Grade B-"><i class="fa fa-battery-three-quarters"></i><span> B-</span></a>
+								<a href="#" target="new_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="Energy-Efficient Home Grade B-"><i class="fa fa-battery-three-quarters"></i><span> B-</span></a> -->
 								<div class="pull-right">
-									<a href="#" target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
+									<a target="new_blank"><i class="fa fa-heart-o"></i><span>Save</span></a>
 								</div>
 							</div>
 							<!-- end. Card actions -->

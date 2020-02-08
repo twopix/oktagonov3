@@ -6,7 +6,7 @@ title:
 image: /assets/img/properties/thasos_spiti50m09.jpg
 squard: 50
 address:
-  el: 'Θάσος, 3χλμ από την ακτή με άπλετη θέα'
+  el: 'Θάσος'
   en: 'Thassos, Greece'
 description:
   el: >-

@@ -6,7 +6,7 @@ title:
 image: /assets/img/petrinoktisma2.jpg
 squard: 30
 address:
-  el: 'Θάσος, 3χλμ από τη θάλασσα'
+  el: 'Θάσος'
   en: 'Thassos, Greece'
 description:
   el: >-
